@@ -10,15 +10,15 @@ module.exports = {
         "secondary-color": "#FF9183",
       },
       boxShadow: {
-        "inner-shadow-card": "inset 0px 0px 16px #3A365B;",
+        "inner-card": "inset 0px 0px 16px #3A365B;",
       },
       borderColor: {
         "border-color-personal-card":
           "linear-gradient(90deg, #FF9183 0%, #D94A69 100%);",
       },
       fontFamily: {
-        "primary-font": "Open Sans, sans-serif",
-        "secondary-font": "JetBrains Mono, monospace;",
+        primary: "Open Sans, sans-serif",
+        secondary: "JetBrains Mono, monospace;",
       },
     },
   },
