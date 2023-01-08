@@ -1,14 +1,29 @@
 ---
 import PersonalCard from "../components/PersonalCard.astro";
+import Section from "../components/Section.astro";
 import Container from "../layouts/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Adrià Martínez">
   <Container>
-    <section class="flex flex-col gap-4">
-      <span class="text-white text-4xl font-extrabold">Hi 👋, I am</span>
-      <PersonalCard name={"Adrià Martínez"} role={"Full Stack Developer"} />
-    </section>
+    <div class="flex flex-col gap-8">
+      <section class="flex flex-col gap-4">
+        <span class="text-white text-4xl font-extrabold">Hi 👋, I am</span>
+        <PersonalCard name={"Adrià Martínez"} role={"Full Stack Developer"} />
+      </section>
+
+      <Section title={"About"}>
+        <p class="text-paragraph-color">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          hendrerit ullamcorper magna, sed tincidunt nulla venenatis sit amet.
+          Morbi ullamcorper aliquet orci. Nunc condimentum mi ut ultricies
+          pulvinar. Maecenas lobortis non nulla vel luctus. Ut ullamcorper
+          lobortis ligula eget ornare. Nam quis hendrerit magna. Duis malesuada,
+          sem nec convallis rhoncus, felis libero maximus nibh, et semper nisi
+          arcu vel metus.
+        </p>
+      </Section>
+    </div>
   </Container>
 </Layout>
