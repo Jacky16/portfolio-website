@@ -1,5 +1,14 @@
 ---
+import PersonalCard from "../components/PersonalCard.astro";
+import Container from "../layouts/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Adrià Martínez" />
+<Layout title="Adrià Martínez">
+  <Container>
+    <section class="flex flex-col gap-4">
+      <span class="text-white text-4xl font-extrabold">Hi 👋, I am</span>
+      <PersonalCard name={"Adrià Martínez"} role={"Full Stack Developer"} />
+    </section>
+  </Container>
+</Layout>
