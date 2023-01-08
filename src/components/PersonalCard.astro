@@ -9,17 +9,17 @@ interface Props {
 const { name, role }: Props = Astro.props;
 ---
 
-<section
-  class="wrapper border-2 rounded-xl bg-background-color w-full shadow-inner-card p-4 shadow-inner-shadow-card font-secondary"
+<article
+  class="wrapper rounded-xl bg-background-color w-full shadow-inner-card px-2 py-4 shadow-inner-shadow-card font-secondary md:px-6"
 >
   <div
-    class="personal-card w-full h-full border-4 p-6 flex flex-col justify-center items-center gap-4 rounded-xl"
+    class="personal-card w-full h-full border-4 p-4 flex flex-col justify-center items-center gap-4 rounded-xl"
   >
-    <h1 class="text-5xl md:text-6xl text-white md:text-5xl [perspective(30px)]">
+    <h1 class="text-[35px] md:text-6xl text-white md:text-5xl">
       {name}
     </h1>
     <div
-      class="fullstack w-80 flex justify-center items-center text-white bg-primary-color rounded-full p-3.5 text-2xl uppercase"
+      class="fullstack w-full md:w-96 flex justify-center items-center text-white bg-primary-color rounded-full p-2 text-xl uppercase"
     >
       {role}
     </div>
@@ -52,7 +52,7 @@ const { name, role }: Props = Astro.props;
       </a>
     </nav>
   </div>
-</section>
+</article>
 
 <script>
   // @ts-nocheck
@@ -63,9 +63,10 @@ const { name, role }: Props = Astro.props;
 
   VanillaTilt.init(personalCard, {
     speed: 350,
+    max: 8,
     transition: true,
     perspective: 2000,
-    scale: 1.05,
+    scale: 1.1,
     glare: true,
     "max-glare": "0.1",
     gyroscope: true,
@@ -83,6 +84,6 @@ const { name, role }: Props = Astro.props;
     transform: translateZ(50px);
   }
   .social-links {
-    transform: translateZ(30px);
+    transform: translateZ(25px);
   }
 </style>
