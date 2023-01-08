@@ -1,57 +1,88 @@
 ---
 import "@fontsource/open-sans";
+
+interface Props {
+  name: String;
+  role: String;
+}
+
+const { name, role }: Props = Astro.props;
 ---
 
-<div
-  class="border-2 rounded-xl bg-background-color w-auto h-[300px] shadow-inner-shadow-card flex justify-center items-center p-2.5"
+<section
+  class="wrapper border-2 rounded-xl bg-background-color w-full shadow-inner-card p-4 shadow-inner-shadow-card font-secondary"
 >
   <div
-    class="h-full w-full rounded-md bg-gradient-to-br from-primary-color to-transparent p-1"
+    class="personal-card w-full h-full border-4 p-6 flex flex-col justify-center items-center gap-4 rounded-xl"
   >
+    <h1 class="text-5xl md:text-6xl text-white md:text-5xl [perspective(30px)]">
+      {name}
+    </h1>
     <div
-      class="h-full w-full items-center justify-center bg-background-color back p-4 flex flex-col gap-8"
+      class="fullstack w-80 flex justify-center items-center text-white bg-primary-color rounded-full p-3.5 text-2xl uppercase"
     >
-      <h1
-        class="text-4xl text-white font-light font-secondary-font md:text-5xl"
-      >
-        Adrià Martínez
-      </h1>
-      <div
-        class="bg-primary-color w-auto h-16 rounded-full flex justify-center items-center p-4"
-      >
-        <span
-          class="block w-auto text-white text-2xl font-secondary-font uppercase"
-          >Full stack developer</span
-        >
-      </div>
-      <nav class="w-full flex justify-center items-center gap-4">
-        <a class="cursor-pointer">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 49"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M24 4.5C21.3736 4.5 18.7728 5.01732 16.3463 6.02241C13.9198 7.0275 11.715 8.50069 9.85786 10.3579C6.10714 14.1086 4 19.1957 4 24.5C4 33.34 9.74 40.84 17.68 43.5C18.68 43.66 19 43.04 19 42.5V39.12C13.46 40.32 12.28 36.44 12.28 36.44C11.36 34.12 10.06 33.5 10.06 33.5C8.24 32.26 10.2 32.3 10.2 32.3C12.2 32.44 13.26 34.36 13.26 34.36C15 37.4 17.94 36.5 19.08 36.02C19.26 34.72 19.78 33.84 20.34 33.34C15.9 32.84 11.24 31.12 11.24 23.5C11.24 21.28 12 19.5 13.3 18.08C13.1 17.58 12.4 15.5 13.5 12.8C13.5 12.8 15.18 12.26 19 14.84C20.58 14.4 22.3 14.18 24 14.18C25.7 14.18 27.42 14.4 29 14.84C32.82 12.26 34.5 12.8 34.5 12.8C35.6 15.5 34.9 17.58 34.7 18.08C36 19.5 36.76 21.28 36.76 23.5C36.76 31.14 32.08 32.82 27.62 33.32C28.34 33.94 29 35.16 29 37.02V42.5C29 43.04 29.32 43.68 30.34 43.5C38.28 40.82 44 33.34 44 24.5C44 21.8736 43.4827 19.2728 42.4776 16.8463C41.4725 14.4198 39.9993 12.215 38.1421 10.3579C36.285 8.50069 34.0802 7.0275 31.6537 6.02241C29.2272 5.01732 26.6264 4.5 24 4.5Z"
-              fill="#FFFFFE"></path>
-          </svg>
-        </a>
-        <a>
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 48 49"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M38 6.5C39.0609 6.5 40.0783 6.92143 40.8284 7.67157C41.5786 8.42172 42 9.43913 42 10.5V38.5C42 39.5609 41.5786 40.5783 40.8284 41.3284C40.0783 42.0786 39.0609 42.5 38 42.5H10C8.93913 42.5 7.92172 42.0786 7.17157 41.3284C6.42143 40.5783 6 39.5609 6 38.5V10.5C6 9.43913 6.42143 8.42172 7.17157 7.67157C7.92172 6.92143 8.93913 6.5 10 6.5H38ZM37 37.5V26.9C37 25.1708 36.3131 23.5124 35.0903 22.2897C33.8676 21.0669 32.2092 20.38 30.48 20.38C28.78 20.38 26.8 21.42 25.84 22.98V20.76H20.26V37.5H25.84V27.64C25.84 26.1 27.08 24.84 28.62 24.84C29.3626 24.84 30.0748 25.135 30.5999 25.6601C31.125 26.1852 31.42 26.8974 31.42 27.64V37.5H37ZM13.76 17.62C14.6511 17.62 15.5058 17.266 16.1359 16.6359C16.766 16.0058 17.12 15.1511 17.12 14.26C17.12 12.4 15.62 10.88 13.76 10.88C12.8636 10.88 12.0039 11.2361 11.37 11.87C10.7361 12.5039 10.38 13.3636 10.38 14.26C10.38 16.12 11.9 17.62 13.76 17.62ZM16.54 37.5V20.76H11V37.5H16.54Z"
-              fill="#FFFFFE"></path>
-          </svg>
-        </a>
-      </nav>
+      {role}
     </div>
+    <nav class="social-links flex flex-grow gap-4 h-11">
+      <a class="cursor-pointer">
+        <svg
+          width="42"
+          height="42"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21V19.31C6.73 19.91 6.14 17.97 6.14 17.97C5.68 16.81 5.03 16.5 5.03 16.5C4.12 15.88 5.1 15.9 5.1 15.9C6.1 15.97 6.63 16.93 6.63 16.93C7.5 18.45 8.97 18 9.54 17.76C9.63 17.11 9.89 16.67 10.17 16.42C7.95 16.17 5.62 15.31 5.62 11.5C5.62 10.39 6 9.5 6.65 8.79C6.55 8.54 6.2 7.5 6.75 6.15C6.75 6.15 7.59 5.88 9.5 7.17C10.29 6.95 11.15 6.84 12 6.84C12.85 6.84 13.71 6.95 14.5 7.17C16.41 5.88 17.25 6.15 17.25 6.15C17.8 7.5 17.45 8.54 17.35 8.79C18 9.5 18.38 10.39 18.38 11.5C18.38 15.32 16.04 16.16 13.81 16.41C14.17 16.72 14.5 17.33 14.5 18.26V21C14.5 21.27 14.66 21.59 15.17 21.5C19.14 20.16 22 16.42 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"
+            fill="#FFFFFE"></path>
+        </svg>
+      </a>
+      <a class="cursor-pointer">
+        <svg
+          width="42"
+          height="42"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
+            fill="#FFFFFE"></path>
+        </svg>
+      </a>
+    </nav>
   </div>
-</div>
+</section>
+
+<script>
+  // @ts-nocheck
+
+  import VanillaTilt from "vanilla-tilt";
+
+  const personalCard = document.querySelector(".personal-card");
+
+  VanillaTilt.init(personalCard, {
+    speed: 350,
+    transition: true,
+    perspective: 2000,
+    scale: 1.05,
+    glare: true,
+    "max-glare": "0.1",
+    gyroscope: true,
+  });
+</script>
+
+<style scoped>
+  .personal-card {
+    transform-style: preserve-3d;
+  }
+  h1 {
+    transform: translateZ(30px);
+  }
+  .fullstack {
+    transform: translateZ(50px);
+  }
+  .social-links {
+    transform: translateZ(30px);
+  }
+</style>
