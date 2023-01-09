@@ -6,7 +6,7 @@ interface StackDisplayProps {
 }
 
 const StackList = ({ stackItems }: StackDisplayProps) => (
-  <ul className="flex gap-4 flex-wrap">
+  <ul className="flex gap-4 flex-wrap h-80 md:h-60 overflow-y-auto justify-center">
     {stackItems.map((item) => (
       <StackItem key={item.name} item={item} />
     ))}
