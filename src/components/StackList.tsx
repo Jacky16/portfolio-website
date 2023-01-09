@@ -1,13 +1,14 @@
-import type { StackItem } from "../types";
+import type { StackItemStructure } from "../types";
+import StackItem from "./StackItem";
 
 interface StackDisplayProps {
-  stackItems: StackItem[];
+  stackItems: StackItemStructure[];
 }
 
 const StackList = ({ stackItems }: StackDisplayProps) => (
-  <ul>
-    {stackItems.map((stackItem) => (
-      <li>{stackItem.name}</li>
+  <ul className="flex gap-4 flex-wrap">
+    {stackItems.map((item) => (
+      <StackItem key={item.name} item={item} />
     ))}
   </ul>
 );
