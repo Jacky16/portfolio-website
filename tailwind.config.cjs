@@ -8,6 +8,7 @@ module.exports = {
         "background-color": "#0F0E17",
         "primary-color": "#FF8906",
         "secondary-color": "#FF9183",
+        "paragraph-color": "#A7A9BE",
       },
       boxShadow: {
         "inner-card": "inset 0px 0px 16px #3A365B;",
