@@ -1,4 +1,3 @@
-import * as icons from "simple-icons";
 import { StackItemStructure, StackType } from "../types";
 
 const getIconImage = (stackTitle: string, color?: string) =>
@@ -9,37 +8,37 @@ const getIconImage = (stackTitle: string, color?: string) =>
 const stack: StackItemStructure[] = [
   {
     name: "Javascript",
-    image: getIconImage(icons.siJavascript.title),
+    image: getIconImage("javascript"),
     type: StackType.All,
   },
   {
     name: "Typescript",
-    image: getIconImage(icons.siTypescript.title),
+    image: getIconImage("typescript"),
     type: StackType.All,
   },
   {
     name: "HTML5",
-    image: getIconImage(icons.siHtml5.title),
+    image: getIconImage("html5"),
     type: StackType.Frontend,
   },
   {
     name: "CSS3",
-    image: getIconImage(icons.siCss3.title),
+    image: getIconImage("css3"),
     type: StackType.Frontend,
   },
   {
     name: "React",
-    image: getIconImage(icons.siReact.title),
+    image: getIconImage("react"),
     type: StackType.Frontend,
   },
   {
     name: "Redux",
-    image: getIconImage(icons.siRedux.title),
+    image: getIconImage("redux"),
     type: StackType.Frontend,
   },
   {
     name: "Bem",
-    image: getIconImage(icons.siBem.title, "white"),
+    image: getIconImage("bem", "white"),
     type: StackType.Frontend,
   },
   {
@@ -49,12 +48,12 @@ const stack: StackItemStructure[] = [
   },
   {
     name: "SASS",
-    image: getIconImage(icons.siSass.title),
+    image: getIconImage("sass"),
     type: StackType.Frontend,
   },
   {
-    name: "Material-UI",
-    image: getIconImage(icons.siMui.title),
+    name: "MUI",
+    image: getIconImage("mui"),
     type: StackType.Frontend,
   },
   {
@@ -64,17 +63,17 @@ const stack: StackItemStructure[] = [
   },
   {
     name: "NodeJS",
-    image: getIconImage(icons.siNodedotjs.title),
+    image: getIconImage("node.js"),
     type: StackType.Backend,
   },
   {
     name: "Express",
-    image: getIconImage(icons.siExpress.title, "white"),
+    image: getIconImage("express", "white"),
     type: StackType.Backend,
   },
   {
     name: "MongoDB",
-    image: getIconImage(icons.siMongodb.title),
+    image: getIconImage("mongodb"),
     type: StackType.Backend,
   },
   {
@@ -84,13 +83,12 @@ const stack: StackItemStructure[] = [
   },
   {
     name: "Sharp",
-    image: getIconImage(icons.siSharp.title),
+    image: getIconImage("sharp"),
     type: StackType.Backend,
   },
-
   {
     name: "Supabase",
-    image: getIconImage(icons.siSupabase.title),
+    image: getIconImage("supabase"),
     type: StackType.Backend,
   },
 ];
