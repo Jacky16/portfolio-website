@@ -4,7 +4,7 @@ export enum StackType {
   All = "All",
 }
 
-export interface StackItem {
+export interface StackItemStructure {
   name: string;
   image: string;
   type: StackType;
