@@ -5,7 +5,7 @@ interface StackItemProps {
 }
 
 const StackItem = ({ item: { name, image } }: StackItemProps) => (
-  <li className="p-2 flex flex-col items-center justify-center gap-2 rounded-lg w-24  text-center">
+  <li className="p-2 flex flex-col items-center justify-start gap-2 rounded-lg w-28  text-center">
     <img height="32" width="32" src={image} alt={`${name} icon`} />
     <span>{name}</span>
   </li>
