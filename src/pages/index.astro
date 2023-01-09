@@ -1,8 +1,10 @@
 ---
 import PersonalCard from "../components/PersonalCard.astro";
 import Section from "../components/Section.astro";
+import StackFilter from "../components/StackFilter";
 import Container from "../layouts/Container.astro";
 import Layout from "../layouts/Layout.astro";
+import stack from "../data/stack";
 ---
 
 <Layout title="Adrià Martínez">
@@ -23,6 +25,7 @@ import Layout from "../layouts/Layout.astro";
           sem nec convallis rhoncus, felis libero maximus nibh, et semper nisi
           arcu vel metus.
         </p>
+        <StackFilter client:load stackItems={stack} />
       </Section>
     </div>
   </Container>
