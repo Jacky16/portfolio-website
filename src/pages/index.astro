@@ -15,18 +15,69 @@ import stack from "../data/stack";
         <PersonalCard name={"Adrià Martínez"} role={"Full Stack Developer"} />
       </section>
 
-      <Section title={"About"}>
-        <p class="text-paragraph-color">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          hendrerit ullamcorper magna, sed tincidunt nulla venenatis sit amet.
-          Morbi ullamcorper aliquet orci. Nunc condimentum mi ut ultricies
-          pulvinar. Maecenas lobortis non nulla vel luctus. Ut ullamcorper
-          lobortis ligula eget ornare. Nam quis hendrerit magna. Duis malesuada,
-          sem nec convallis rhoncus, felis libero maximus nibh, et semper nisi
-          arcu vel metus.
-        </p>
-        <StackFilter client:load stackItems={stack} />
-      </Section>
+      <div class="flex gap-14 justify-center flex-col md:flex-row md:gap-6">
+        <Section title={"About"}>
+          <p class="text-paragraph-color px-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            hendrerit ullamcorper magna, sed tincidunt nulla venenatis sit amet.
+            Morbi ullamcorper aliquet orci. Nunc condimentum mi ut ultricies
+            pulvinar. Maecenas lobortis non nulla vel luctus. Ut ullamcorper
+            lobortis ligula eget ornare. Nam quis hendrerit magna. Duis
+            malesuada, sem nec convallis rhoncus, felis libero maximus nibh, et
+            semper nisi arcu vel metus.
+          </p>
+          <StackFilter client:load stackItems={stack} />
+        </Section>
+        <div class="h-96 w-1.5 self-center bg-white/50 hidden md:block"></div>
+        <Section title={"Contact"}>
+          <div class="flex flex-col justify-center gap-16 h-full">
+            <ul class="flex flex-col gap-6">
+              <li
+                class="flex gap-2 items-center bg-gradient-to-r from-primary-color to-[#BA3B56] bg-clip-text text-transparent font-extrabold text-xl"
+              >
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M40 8H8C5.8 8 4.02 9.8 4.02 12L4 36C4 38.2 5.8 40 8 40H40C42.2 40 44 38.2 44 36V12C44 9.8 42.2 8 40 8ZM40 16L24 26L8 16V12L24 22L40 12V16Z"
+                    fill="white"></path>
+                </svg>
+                <a href="mailto:adriamartinez94@gmail.com"
+                  >adriamartinez94@gmail.com</a
+                >
+              </li>
+              <li
+                class="flex gap-2 items-center bg-gradient-to-r from-primary-color to-[#BA3B56] bg-clip-text text-transparent font-extrabold text-xl"
+              >
+                <svg
+                  width="38"
+                  height="38"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.24 21.58C16.12 27.24 20.76 31.86 26.42 34.76L30.82 30.36C31.36 29.82 32.16 29.64 32.86 29.88C35.1 30.62 37.52 31.02 40 31.02C41.1 31.02 42 31.92 42 33.02V40C42 41.1 41.1 42 40 42C21.22 42 6 26.78 6 8C6 6.9 6.9 6 8 6H15C16.1 6 17 6.9 17 8C17 10.5 17.4 12.9 18.14 15.14C18.36 15.84 18.2 16.62 17.64 17.18L13.24 21.58Z"
+                    fill="white"></path>
+                </svg>
+
+                <a href="tel:617563982">617563982</a>
+              </li>
+            </ul>
+
+            <a
+              href="./../../assets/CV-Adria-Martinez.pdf"
+              download="CV-Adria-Martinez"
+              class="bg-gradient-to-r from-primary-color to-[#BA3B56] text-white p-2 rounded-md text-xl text-center cursor-pointer transition-transform hover:scale-105 flex flex-col"
+              >Download CV <small>Spanish</small></a
+            >
+          </div>
+        </Section>
+      </div>
     </div>
   </Container>
 </Layout>
