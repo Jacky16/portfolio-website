@@ -7,7 +7,7 @@ const projects: Project[] = [
     description:
       "Tweeter is a clone of Twitter, in which users can create, delete, and edit tweets. However, deleting and editing tweets is only allowed if the user is the author of the tweet. In addition, it has a function of filtering tweets by category, allowing users to search and view specific tweets.",
 
-    image: "./../../assets/images/tweeter-icon.svg",
+    image: "/assets/images/tweeter-icon.svg",
     stack: findStackItemsByName([
       "React",
       "Typescript",
