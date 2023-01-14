@@ -19,7 +19,9 @@ const {
 }: Props = Astro.props;
 ---
 
-<li class="w-full h-auto max-w-lg flex items-center justify-center">
+<li
+  class="project-card w-full h-auto max-w-lg flex items-center justify-center"
+>
   <article
     class="h-full w-full p-1.5 bg-gradient-to-r from-primary-color to-secondary-color rounded-md"
   >
@@ -93,3 +95,21 @@ const {
     </div>
   </article>
 </li>
+
+<script>
+  // @ts-nocheck
+
+  import VanillaTilt from "vanilla-tilt";
+
+  const projectCard = document.querySelector(".project-card");
+
+  VanillaTilt.init(projectCard, {
+    speed: 1000,
+    max: 5,
+    transition: true,
+    perspective: 2000,
+    reverse: true,
+    glare: true,
+    "max-glare": "0.1",
+  });
+</script>
