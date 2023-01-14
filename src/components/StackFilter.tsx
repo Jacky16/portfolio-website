@@ -22,7 +22,10 @@ export const StackFilter = ({ stackItems }: StackFilterProps) => {
     }
 
     setFilterStack(
-      stackItems.filter((stackItem) => stackItem.type === filterTo)
+      stackItems.filter(
+        (stackItem) =>
+          stackItem.type === filterTo || stackItem.type === StackType.All
+      )
     );
   };
 

@@ -23,6 +23,11 @@ const stack: StackItemStructure[] = [
     type: StackType.Frontend,
   },
   {
+    name: "Astro",
+    image: getIconImage("astro"),
+    type: StackType.Frontend,
+  },
+  {
     name: "React",
     image: getIconImage("react"),
     type: StackType.Frontend,
@@ -30,6 +35,16 @@ const stack: StackItemStructure[] = [
   {
     name: "Redux",
     image: getIconImage("redux"),
+    type: StackType.Frontend,
+  },
+  {
+    name: "Jest",
+    image: getIconImage("jest"),
+    type: StackType.All,
+  },
+  {
+    name: "Testing Library",
+    image: getIconImage("testinglibrary"),
     type: StackType.Frontend,
   },
   {
@@ -57,6 +72,7 @@ const stack: StackItemStructure[] = [
     image: getIconImage("styledcomponents"),
     type: StackType.Frontend,
   },
+
   {
     name: "NodeJS",
     image: getIconImage("node.js"),
