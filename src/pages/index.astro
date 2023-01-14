@@ -19,16 +19,23 @@ import ProjectCard from "../components/ProjectCard.astro";
 
       <div class="flex gap-14 justify-center flex-col md:flex-row md:gap-6">
         <Section title={"About"}>
-          <p class="text-paragraph-color px-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            hendrerit ullamcorper magna, sed tincidunt nulla venenatis sit amet.
-            Morbi ullamcorper aliquet orci. Nunc condimentum mi ut ultricies
-            pulvinar. Maecenas lobortis non nulla vel luctus. Ut ullamcorper
-            lobortis ligula eget ornare. Nam quis hendrerit magna. Duis
-            malesuada, sem nec convallis rhoncus, felis libero maximus nibh, et
-            semper nisi arcu vel metus.
+          <p class="text-paragraph-color px-2 text-xl">
+            I am passionate about finding new ways to solve problems and
+            bringing ideas to fruition.
+            <br />
+            <br /> I am deeply interested in software development and am always seeking
+            to learn and improve my skills. I understand the importance of <strong
+              class="text-primary-color">clean code</strong
+            >
+            and thorough <strong class="text-primary-color">testing</strong> to ensure
+            that the code is maintainable, scalable and <strong
+              class="text-primary-color">readable for other developers</strong
+            >
+            <br />
+            <br /> I enjoy working in a team and collaborating with others to achieve
+            common goals. With a focus on quality and innovation, I always strive
+            to challenge myself and overcome any obstacles that come my way.
           </p>
-          <StackFilter client:load stackItems={stack} />
         </Section>
         <div class="h-96 w-1.5 self-center bg-white/50 hidden md:block"></div>
         <Section title={"Contact"}>
@@ -80,7 +87,9 @@ import ProjectCard from "../components/ProjectCard.astro";
           </div>
         </Section>
       </div>
-
+      <Section title={"Stack"}>
+        <StackFilter client:load stackItems={stack} />
+      </Section>
       <Section title={"Projects"}>
         <ul>
           {projects.map((project) => <ProjectCard project={project} />)}
