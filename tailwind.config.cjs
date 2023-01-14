@@ -7,7 +7,7 @@ module.exports = {
       colors: {
         "background-color": "#0F0E17",
         "primary-color": "#FF8906",
-        "secondary-color": "#FF9183",
+        "secondary-color": "#BA3B56",
         "paragraph-color": "#A7A9BE",
       },
       boxShadow: {
