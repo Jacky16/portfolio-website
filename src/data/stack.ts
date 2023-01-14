@@ -1,9 +1,5 @@
 import { StackItemStructure, StackType } from "../types";
-
-const getIconImage = (stackTitle: string, color?: string) =>
-  color === undefined
-    ? `https://cdn.simpleicons.org/${stackTitle}`
-    : `https://cdn.simpleicons.org/${stackTitle}/${color}`;
+import { getIconImage } from "../utils/stackUtils";
 
 const stack: StackItemStructure[] = [
   {

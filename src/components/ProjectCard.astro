@@ -1,0 +1,115 @@
+---
+import type { Project } from "../types";
+
+interface Props {
+  project: Project;
+}
+
+const {
+  project: {
+    title,
+    description,
+    projectLink,
+    projectType,
+    stack,
+    image,
+    backCode,
+    frontendCode,
+  },
+}: Props = Astro.props;
+---
+
+<li
+  class="project-card w-full h-auto max-w-lg flex items-center justify-center"
+>
+  <article
+    class="h-full w-full p-1.5 bg-gradient-to-r from-primary-color to-secondary-color rounded-md"
+  >
+    <div
+      class="h-full w-full bg-background-color px-4 py-6 flex flex-col gap-4"
+    >
+      <div class="flex flex-col">
+        <div class="flex items-center gap-4 justify-between w-full">
+          <h3 class="text-white text-3xl">{title}</h3>
+          <span
+            class="text-white bg-gradient-to-r from-primary-color/20 to-transparent py-1 px-5 text-center rounded-full w-40"
+            >{projectType}</span
+          >
+        </div>
+
+        <img
+          height="184px"
+          width="250px"
+          src={image}
+          alt={`${title} icon`}
+          class="self-center"
+        />
+      </div>
+
+      <div class="flex flex-col gap-6 justify-between h-full">
+        <p class="text-paragraph-color">
+          {description}
+        </p>
+        <ul class="flex flex-wrap gap-2 md:gap-4">
+          {
+            stack.map((stackItem) => (
+              <li class="text-white py-0.5 rounded-full">
+                <span
+                  class={
+                    "flex items-center justify-center bg-slate-800 p-4 h-8 text-center rounded-full"
+                  }
+                >
+                  {stackItem.name}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <nav
+        class="font-secondary text-white flex flex-col gap-6 md:flex-row md:items-center"
+      >
+        <a
+          class="bg-gradient-to-r from-primary-color to-secondary-color py-1.5 px-3 rounded-full text-center"
+          href={projectLink}
+          target="_blank">View site</a
+        >
+        <div class="flex gap-6 justify-center">
+          {
+            frontendCode && (
+              <a href={frontendCode} target="_blank">
+                Frontend code
+              </a>
+            )
+          }
+          {
+            backCode && (
+              <a href={backCode} target="_blank">
+                Backend code
+              </a>
+            )
+          }
+        </div>
+      </nav>
+    </div>
+  </article>
+</li>
+
+<script>
+  // @ts-nocheck
+
+  import VanillaTilt from "vanilla-tilt";
+
+  const projectCard = document.querySelector(".project-card");
+
+  VanillaTilt.init(projectCard, {
+    speed: 1000,
+    max: 5,
+    transition: true,
+    perspective: 2000,
+    reverse: true,
+    glare: true,
+    "max-glare": "0.1",
+  });
+</script>

@@ -5,6 +5,8 @@ import StackFilter from "../components/StackFilter";
 import Container from "../layouts/Container.astro";
 import Layout from "../layouts/Layout.astro";
 import stack from "../data/stack";
+import projects from "../data/projects";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Adrià Martínez">
@@ -78,6 +80,12 @@ import stack from "../data/stack";
           </div>
         </Section>
       </div>
+
+      <Section title={"Projects"}>
+        <ul>
+          {projects.map((project) => <ProjectCard project={project} />)}
+        </ul>
+      </Section>
     </div>
   </Container>
 </Layout>
