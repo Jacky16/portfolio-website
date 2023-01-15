@@ -98,13 +98,33 @@ import ProjectCard from "../components/ProjectCard.astro";
     </div>
   </Container>
 </Layout>
+
 <script>
-  import { gsap } from "gsap";
+  import { gsap, ScrollTrigger } from "gsap/all";
+  gsap.registerPlugin(ScrollTrigger);
 
   const duration = 1;
   const opacity = 0.2;
+  const markers = false;
+
+  gsap.from(".personal-card", {
+    duration: 0.8,
+    scale: 0.5,
+    opacity,
+    rotateZ: 10,
+    scrollTrigger: {
+      trigger: ".personal-card",
+      end: "bottom bottom",
+      markers,
+    },
+  });
 
   gsap.from(".about", {
+    scrollTrigger: {
+      trigger: ".about",
+      end: "bottom bottom",
+      markers,
+    },
     y: 50,
     opacity,
     duration,
@@ -114,18 +134,32 @@ import ProjectCard from "../components/ProjectCard.astro";
     y: 50,
     opacity,
     duration,
+    scrollTrigger: {
+      trigger: ".contact",
+      end: "bottom bottom",
+      markers,
+    },
   });
 
   gsap.from(".stack", {
+    duration,
     y: 50,
     opacity: 0.5,
-    duration,
+    scrollTrigger: {
+      trigger: ".stack",
+      end: "bottom bottom",
+      markers,
+    },
   });
-  gsap.from(".personal-card", {
-    scale: 0,
-    opacity: 0,
-    rotateZ: 10,
-    duration: 1,
+  gsap.from(".projects", {
+    duration,
+    y: 50,
+    opacity: 0.5,
+    scrollTrigger: {
+      trigger: ".projects",
+      end: "bottom bottom",
+      markers,
+    },
   });
 
   document.querySelectorAll(".stack-item").forEach((stackItem, index) => {
@@ -137,12 +171,17 @@ import ProjectCard from "../components/ProjectCard.astro";
     });
   });
 
-  document.querySelectorAll(".project").forEach((stackItem, index) => {
-    gsap.from(stackItem, {
+  document.querySelectorAll(".project").forEach((projectItem, index) => {
+    gsap.from(projectItem, {
       duration,
-      y: 25,
       scale: 0.9,
+      opacity: 0,
       delay: index * 0.05,
+      scrollTrigger: {
+        trigger: ".project",
+        end: "bottom bottom",
+        markers,
+      },
     });
   });
 </script>
