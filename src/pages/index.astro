@@ -98,3 +98,51 @@ import ProjectCard from "../components/ProjectCard.astro";
     </div>
   </Container>
 </Layout>
+<script>
+  import { gsap } from "gsap";
+
+  const duration = 1;
+  const opacity = 0.2;
+
+  gsap.from(".about", {
+    y: 50,
+    opacity,
+    duration,
+  });
+
+  gsap.from(".contact", {
+    y: 50,
+    opacity,
+    duration,
+  });
+
+  gsap.from(".stack", {
+    y: 50,
+    opacity: 0.5,
+    duration,
+  });
+  gsap.from(".personal-card", {
+    scale: 0,
+    opacity: 0,
+    rotateZ: 10,
+    duration: 1,
+  });
+
+  document.querySelectorAll(".stack-item").forEach((stackItem, index) => {
+    gsap.from(stackItem, {
+      duration,
+      scale: 0.5,
+      opacity: 0,
+      delay: index * 0.05,
+    });
+  });
+
+  document.querySelectorAll(".project").forEach((stackItem, index) => {
+    gsap.from(stackItem, {
+      duration,
+      y: 25,
+      scale: 0.9,
+      delay: index * 0.05,
+    });
+  });
+</script>
