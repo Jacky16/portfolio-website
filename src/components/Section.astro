@@ -6,7 +6,7 @@ interface Props {
 const { title }: Props = Astro.props;
 ---
 
-<section class="flex flex-col gap-4">
+<section class={`${title.toLocaleLowerCase()} flex flex-col gap-4`}>
   <h2
     class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FF9183] to-[#D94A69]"
   >
