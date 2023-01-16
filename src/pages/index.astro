@@ -11,11 +11,11 @@ import ProjectCard from "../components/ProjectCard.astro";
 
 <Layout title="Adrià Martínez">
   <Container>
-    <div class="flex flex-col gap-8">
-      <section class="flex flex-col gap-4">
+    <div class="flex flex-col gap-16">
+      <header class="flex flex-col gap-4">
         <span class="text-white text-4xl font-extrabold">Hi 👋, I am</span>
         <PersonalCard name={"Adrià Martínez"} role={"Full Stack Developer"} />
-      </section>
+      </header>
 
       <div class="flex gap-14 justify-center flex-col md:flex-row md:gap-6">
         <Section title={"About"}>
@@ -39,7 +39,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         </Section>
         <div class="h-96 w-1.5 self-center bg-white/50 hidden md:block"></div>
         <Section title={"Contact"}>
-          <div class="flex flex-col justify-center gap-16 h-full">
+          <div class="flex flex-col gap-6 h-full">
             <ul class="flex flex-col gap-6">
               <li
                 class="flex gap-2 items-center bg-gradient-to-r from-primary-color to-[#BA3B56] bg-clip-text text-transparent font-extrabold text-xl"
@@ -81,7 +81,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             <a
               href="/assets/CV-Adria-Martinez.pdf"
               download="CV-Adria-Martinez"
-              class="bg-gradient-to-r from-primary-color to-[#BA3B56] text-white p-2 rounded-md text-xl text-center cursor-pointer transition-transform hover:scale-105 flex flex-col"
+              class="bg-gradient-to-r from-primary-color to-secondary-color text-white p-2 rounded-md text-xl text-center cursor-pointer transition-transform hover:scale-105 flex flex-col"
               >Download CV <small>Spanish</small></a
             >
           </div>
