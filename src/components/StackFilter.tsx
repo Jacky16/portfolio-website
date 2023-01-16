@@ -30,29 +30,27 @@ export const StackFilter = ({ stackItems }: StackFilterProps) => {
   };
 
   return (
-    <section className=" flex flex-col gap-2 text-white  ">
-      <article className="bg-background-color shadow-2xl shadow-primary-color/20 shadow-4xl rounded-md md:px-4 py-2 ">
-        <div className="flex flex-col gap-4">
-          <div className="flex gap-6  text-lg md:text-xl rounded-sm w-auto h-18 py-1 font-secondary justify-center md:justify-start">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                className={` p-2 rounded-md cursor-default ${
-                  tab === currentSelected
-                    ? "  border-b-2 text-xl font-bold text-primary-color border-primary-color"
-                    : "hover:bg-slate-400"
-                }`}
-                onClick={() => handleFilter(tab)}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          <StackList stackItems={filteredStack} />
+    <article className="text-white bg-background-color shadow-2xl shadow-primary-color/20 shadow-4xl rounded-md md:px-4 py-2 ">
+      <div className="flex flex-col gap-4 md:h-96">
+        <div className="flex gap-6  text-lg md:text-xl rounded-sm w-auto h-18 py-1 font-secondary justify-center md:justify-start">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={` p-2 rounded-md cursor-default ${
+                tab === currentSelected
+                  ? "  border-b-2 text-xl font-bold text-primary-color border-primary-color"
+                  : "hover:bg-slate-400"
+              }`}
+              onClick={() => handleFilter(tab)}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
-      </article>
-    </section>
+
+        <StackList stackItems={filteredStack} />
+      </div>
+    </article>
   );
 };
 
