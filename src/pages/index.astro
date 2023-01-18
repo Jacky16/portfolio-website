@@ -164,7 +164,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 
   document.querySelectorAll(".stack-item").forEach((stackItem, index) => {
     gsap.from(stackItem, {
-      duration,
+      duration: 0.5,
       scale: 0.5,
       opacity: 0,
       delay: index * 0.05,
