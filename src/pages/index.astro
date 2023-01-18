@@ -168,6 +168,11 @@ import ProjectCard from "../components/ProjectCard.astro";
       scale: 0.5,
       opacity: 0,
       delay: index * 0.05,
+      scrollTrigger: {
+        trigger: stackItem,
+        end: "bottom bottom",
+        markers,
+      },
     });
   });
 
