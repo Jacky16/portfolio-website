@@ -17,7 +17,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         <PersonalCard name={"Adrià Martínez"} role={"Full Stack Developer"} />
       </header>
 
-      <div class="flex gap-14 justify-center flex-col md:flex-row md:gap-6">
+      <div class="flex gap-14 justify-center flex-col md:flex-row">
         <Section title={"About"}>
           <p class="text-paragraph-color text-xl">
             I am passionate about finding new ways to solve problems and
@@ -37,7 +37,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             to challenge myself and overcome any obstacles that come my way.
           </p>
         </Section>
-        <div class="h-96 w-1.5 self-center bg-white/50 hidden md:block"></div>
+        <div class="h-72 w-1.5 self-center bg-white/50 hidden md:block"></div>
         <Section title={"Contact"}>
           <div class="flex flex-col gap-6 h-full">
             <ul class="flex flex-col gap-6">
@@ -87,6 +87,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           </div>
         </Section>
       </div>
+
       <Section title={"Stack"}>
         <StackFilter client:load stackItems={stack} />
       </Section>
