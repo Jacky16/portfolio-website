@@ -22,6 +22,17 @@ const projects: Project[] = [
     backCode: "https://github.com/Jacky16/Tweeter-Back",
     projectType: ProjectType.FullStack,
   },
+
+  {
+    title: "Tool AI",
+    description:
+      "Tool AI is a website where users can use AI to detect if a email is spam or not, and to generate questions and answers to progrmaing languajes. This is a submision for a hackaton of streamoer midudev",
+    image: "/assets/images/toolai-icon.webp",
+    stack: findStackItemsByName(["React", "Typescript", "Tailwind"]),
+    projectLink: "https://tool-ai.netlify.app/",
+    frontendCode: "https://github.com/Jacky16/tool-ai",
+    projectType: ProjectType.Frontend,
+  },
 ];
 
 export default projects;
