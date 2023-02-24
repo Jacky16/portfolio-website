@@ -28,7 +28,7 @@ const projects: Project[] = [
     description:
       "Tool AI is a website where users can use AI to detect if a email is spam or not, and to generate questions and answers to progrmaing languajes. This is a submision for a hackaton of streamoer midudev",
     image: "/assets/images/toolai-icon.webp",
-    stack: findStackItemsByName(["React", "Typescript", "Tailwind"]),
+    stack: findStackItemsByName(["React", "Redux", "Typescript", "Tailwind"]),
     projectLink: "https://tool-ai.netlify.app/",
     frontendCode: "https://github.com/Jacky16/tool-ai",
     projectType: ProjectType.Frontend,
