@@ -93,7 +93,7 @@ import ProjectCard from "../components/ProjectCard.astro";
       </Section>
 
       <Section title={"Projects"}>
-        <ul class="flex gap-8">
+        <ul class="flex gap-5 overflow-x-auto sm:gap-8">
           {projects.map((project) => <ProjectCard project={project} />)}
         </ul>
       </Section>
